@@ -1,4 +1,6 @@
 /* eslint-disable tailwindcss/no-custom-classname */
+
+"use client";
 import React from "react";
 import { Button } from "../../ui/button";
 import { IoHome, IoLogOut } from "react-icons/io5";
@@ -6,7 +8,9 @@ import { MdMessage } from "react-icons/md";
 import { FaBuilding, FaClipboardList, FaUsers } from "react-icons/fa";
 import { RiCalendarScheduleFill } from "react-icons/ri";
 import { IoMdSettings } from "react-icons/io";
+import { useRouter } from "next/navigation";
 const Sidebar = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen pb-12">
       <div className="space-y-4 py-4">
@@ -16,6 +20,7 @@ const Sidebar = () => {
             <Button
               variant={"ghost"}
               className=" hover:text-primary w-full justify-start rounded-none"
+              onClick={() => router.push("/")}
             >
               <IoHome className="mr-2 text-lg" />
               Home
@@ -44,6 +49,7 @@ const Sidebar = () => {
             <Button
               variant={"ghost"}
               className=" hover:text-primary w-full justify-start rounded-none"
+              onClick={() => router.push("/job-listing")}
             >
               <FaClipboardList className="mr-2 text-lg" />
               Job Listings
