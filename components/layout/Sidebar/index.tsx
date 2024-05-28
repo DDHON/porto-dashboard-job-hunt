@@ -67,6 +67,7 @@ const Sidebar = () => {
           <div className="px-3 py-2">
             <h2 className="mb-2 px-4 text-lg font-semibold">Setting</h2>
             <Button
+              onClick={() => router.push("/settings")}
               variant={"ghost"}
               className=" hover:text-primary w-full justify-start rounded-none"
             >
@@ -78,7 +79,7 @@ const Sidebar = () => {
               className=" hover:text-red-500d w-full justify-start rounded-none text-red-500 hover:bg-red-200"
             >
               <IoLogOut className="mr-2 text-lg" />
-              Settings
+              Log out
             </Button>
           </div>
         </div>
