@@ -1,9 +1,11 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import "./globals.css";
-import Sidebar from "../components/layout/Sidebar";
-import Header from "../components/Header/Header";
+import "../globals.css";
+import Sidebar from "../../components/layout/Sidebar";
+import Header from "../../components/Header/Header";
+// import Sidebar from "../components/layout/Sidebar";
+// import Header from "../components/Header/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],

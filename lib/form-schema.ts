@@ -12,7 +12,7 @@ export const jobFormSchema = z.object({
   salaryTo: z.string({ required_error: "Salary From is required" }),
   categoryId: z.string({ required_error: "You need to select category" }),
   requiredSkills: z
-    .string()
+    .string({ required_error: "Skill is required" })
     .array()
     .nonempty({ message: "Required skill must be at least 1 skill" }),
   jobDescription: z
@@ -41,14 +41,44 @@ export const overviewFormSchema = z.object({
     .any()
     .refine((item: any) => item?.name, { message: "Image is required" }),
   name: z.string({ required_error: "Name is required" }),
-  webiste: z.string({ required_error: "Website is required" }),
+  website: z.string({ required_error: "Website is required" }),
   location: z.string({ required_error: "Location is required" }),
   employee: z.string({ required_error: "Employee is required" }),
   industry: z.string({ required_error: "industry is required" }),
-  dateFounded: z.string({ required_error: "dateFounded is required" }),
+  dateFounded: z.date({ required_error: "dateFounded is required" }),
   techStack: z
-    .string()
+    .string({ required_error: "Tech Stack is required" })
     .array()
     .nonempty({ message: "Tech Stack must be at least 1 data" }),
   description: z.string({ required_error: "Description is required" }),
+});
+
+export const socialMediaFormSchema = z.object({
+  facebook: z.string({ required_error: "Facebook Link is Required" }),
+  instagram: z.string({ required_error: "instagram Link is Required" }),
+  linkedin: z.string({ required_error: "Linkedin Link is Required" }),
+  twitter: z.string({ required_error: "Twitter Link is Required" }),
+  youtube: z.string({ required_error: "youtube Link is Required" }),
+});
+
+export const teamformSchema = z.object({
+  name: z.string({ required_error: "Name is required" }),
+  position: z.string({ required_error: "Position is required" }),
+  instagram: z.string({ required_error: "Instagram is required" }),
+  linkedin: z.string({ required_error: "Linkedin is required" }),
+});
+
+export const signInFormSchema = z.object({
+  email: z
+    .string({ required_error: "Email is Required" })
+    .email({ message: "Email is not valid" }),
+  password: z.string({ required_error: "Password is required" }),
+});
+
+export const signUpFormSchema = z.object({
+  name: z.string({ required_error: "Name is required" }),
+  email: z
+    .string({ required_error: "Email is Required" })
+    .email({ message: "Email is not valid" }),
+  password: z.string({ required_error: "Password is required" }),
 });

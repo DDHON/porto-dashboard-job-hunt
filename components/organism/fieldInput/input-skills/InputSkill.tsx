@@ -13,8 +13,8 @@ import { FaPlus } from "react-icons/fa";
 
 interface InputSkillsProps {
   form: any;
-  name?: string;
-  label?: string;
+  name: string;
+  label: string;
 }
 const InputSkill = ({ name, form, label }: InputSkillsProps) => {
   const [isHide, setHide] = useState<boolean>(false);
@@ -49,10 +49,11 @@ const InputSkill = ({ name, form, label }: InputSkillsProps) => {
       setValues(val);
     }
   }, [form, name]);
+
   return (
     <FormField
       control={form.control}
-      name="name"
+      name={name}
       render={({ field }) => (
         <FormItem>
           <FormLabel className="block">{label}</FormLabel>

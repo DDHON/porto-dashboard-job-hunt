@@ -1,12 +1,12 @@
 /* eslint-disable tailwindcss/no-custom-classname */
 "use client";
 import React, { useEffect, useState } from "react";
-import { jobFormSchema } from "../../lib/form-schema";
+import { jobFormSchema } from "../../../lib/form-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { FaArrowLeft } from "react-icons/fa";
-import { Separator } from "../../components/ui/separator";
+import { Separator } from "../../../components/ui/separator";
 import {
   Form,
   FormControl,
@@ -15,22 +15,22 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../../components/ui/form";
-import FieldInput from "../../components/organism/fieldInput/FieldInput";
-import { Input } from "../../components/ui/input";
-import { RadioGroup, RadioGroupItem } from "../../components/ui/radio-group";
-import { JOBTYPES } from "../../constant";
+} from "../../../components/ui/form";
+import FieldInput from "../../../components/organism/fieldInput/FieldInput";
+import { Input } from "../../../components/ui/input";
+import { RadioGroup, RadioGroupItem } from "../../../components/ui/radio-group";
+import { JOBTYPES } from "../../../constant";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../../components/ui/select";
-import InputSkill from "../../components/organism/fieldInput/input-skills/InputSkill";
-import CKEditor from "../../components/organism/CKEditor/CKEditor";
-import InputBenefit from "../../components/organism/InputBenefit/InputBenefit";
-import { Button } from "../../components/ui/button";
+} from "../../../components/ui/select";
+import InputSkill from "../../../components/organism/fieldInput/input-skills/InputSkill";
+import CKEditor from "../../../components/organism/CKEditor/CKEditor";
+import InputBenefit from "../../../components/organism/InputBenefit/InputBenefit";
+import { Button } from "../../../components/ui/button";
 
 const PostJobPage = () => {
   const [editorLoaded, setEditorLoaded] = useState(false);
@@ -205,7 +205,7 @@ const PostJobPage = () => {
             title="Require Skills"
             subtitle="Add require sklills for the job"
           >
-            <InputSkill label="Add Skills" name="Add Skills" form={form} />
+            <InputSkill form={form} label="Add Skills" name="requiredSkills" />
           </FieldInput>
 
           <FieldInput
@@ -253,7 +253,7 @@ const PostJobPage = () => {
             title="Perks and Benefits"
             subtitle="Encourage more people to applu by sharing the attaractiv rewars and benefits you offer your employees"
           >
-            <InputBenefit form={form} />
+            <InputBenefit form={form} name="benefits" />
           </FieldInput>
           <div className="flex justify-end">
             <Button size={"lg"}>Do a Review</Button>

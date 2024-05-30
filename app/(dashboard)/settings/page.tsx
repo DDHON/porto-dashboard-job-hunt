@@ -4,8 +4,10 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "../../components/ui/tabs";
-import OverviewForm from "../../components/forms/OverviewForm";
+} from "../../../components/ui/tabs";
+import OverviewForm from "../../../components/forms/OverviewForm";
+import SocialMediaForm from "../../../components/forms/SocialMediaForm";
+import TeamForm from "../../../components/forms/TeamForm";
 
 const page = () => {
   return (
@@ -20,8 +22,12 @@ const page = () => {
         <TabsContent value="overview">
           <OverviewForm />
         </TabsContent>
-        <TabsContent value="socialLinks">Social Links</TabsContent>
-        <TabsContent value="teams">Teams</TabsContent>
+        <TabsContent value="socialLinks">
+          <SocialMediaForm />
+        </TabsContent>
+        <TabsContent value="teams">
+          <TeamForm />
+        </TabsContent>
       </Tabs>
     </div>
   );

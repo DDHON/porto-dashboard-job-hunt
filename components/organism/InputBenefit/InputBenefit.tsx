@@ -46,7 +46,7 @@ const InputBenefit = ({ form, name }: any) => {
 
       <FormField
         control={form.control}
-        name="benefits"
+        name={name}
         render={({ field }) => (
           <FormItem>
             <FormMessage />

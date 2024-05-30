@@ -7,11 +7,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/table";
-import { JOB_LISTING_COLUMNS, JOB_LISTING_DATA } from "../../constant";
-import { Badge } from "../../components/ui/badge";
+} from "../../../components/ui/table";
+import { JOB_LISTING_COLUMNS, JOB_LISTING_DATA } from "../../../constant";
+import { Badge } from "../../../components/ui/badge";
 
-import ButtonActionTable from "../../components/organism/buttonactiontable/ButtonActionTable";
+import ButtonActionTable from "../../../components/organism/buttonactiontable/ButtonActionTable";
 
 const page = () => {
   return (

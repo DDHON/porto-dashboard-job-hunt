@@ -6,9 +6,9 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "../../../components/ui/tabs";
-import Applicants from "../../../components/organism/Applicants/Applicants";
-import JobDetail from "../../../components/organism/JobDetail/JobDetail";
+} from "../../../../components/ui/tabs";
+import Applicants from "../../../../components/organism/Applicants/Applicants";
+import JobDetail from "../../../../components/organism/JobDetail/JobDetail";
 
 const page = () => {
   return (
